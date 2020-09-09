@@ -11,11 +11,11 @@
 		$status = $_POST['status'];
 
 		if($id == ""){
-			$sql = "insert into pousada (num_porta, tipo_quarto, valor_diaria, status)
+			$sql = "insert into quartos (num_porta, tipo_quarto, valor_diaria, status)
 				values ('$num_porta', '$tipo_quarto', '$valor_diaria', '$status')
 			";
 		}else{
-			$sql = "update pousada set num_porta = '$num_porta', tipo_quarto = '$tipo_quarto', valor_diaria = '$valor_diaria', status = '$status'
+			$sql = "update quartos set num_porta = '$num_porta', tipo_quarto = '$tipo_quarto', valor_diaria = '$valor_diaria', status = '$status'
 					where id = ".$id;
 		}
 		
@@ -48,7 +48,7 @@
 </head>
 <body>
     <h2 align=center>Quartos:</h2>
-    <p align=center> <a href="formulario.php">Cadastrar</a></p>
+    <p align=center> <a href="formulario_quartos.php">Cadastrar</a></p>
 
     <table border=1 width=80% align=center><tr>
         <td><label for="num_porta">Numero do Quarto:</label></td>
@@ -60,7 +60,7 @@
 
     
     <?php
-    	$sql = "select id, num_porta, tipo_quarto, valor_diaria, status from pousada ";
+    	$sql = "select id, num_porta, tipo_quarto, valor_diaria, status from quartos ";
 		$resultado = mysqli_query($conexao, $sql);
 
 		while($dados = mysqli_fetch_array($resultado)){
@@ -70,7 +70,7 @@
 				  <td>'.$dados['status'].'</td>
 				  <td>
 					<a href="excluir.php?id='.$dados['id'].'">Excluir</a>
-					<a href="formulario.php?id='.$dados['id'].'">Alterar</a>
+					<a href="formulario_quartos.php?id='.$dados['id'].'">Alterar</a>
 				  </td></tr>';
 		}
 
@@ -79,6 +79,6 @@
 	?>
 
     </table>
-    <p align=center> <a href="formulario.php">Cadastrar</a></p>
+    <p align=center> <a href="formulario_quartos.php">Cadastrar</a></p>
 </body>
 </html>

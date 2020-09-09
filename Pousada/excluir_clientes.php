@@ -6,12 +6,12 @@
 	
 	if($id != ""){
 		
-		$sql = "delete from pousada where id = ".$id;
+		$sql = "delete from clientes where id = ".$id;
 		$resultado = mysqli_query($conexao, $sql);
 		if($resultado){
 			$msg = "Dados excluidos com sucesso!";
 		}
-		echo "<script>window.location.href='quartos.php?msg=$msg';</script>";
+		echo "<script>window.location.href='clientes.php?msg=$msg';</script>";
 		
 	}
 	

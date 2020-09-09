@@ -2,5 +2,5 @@
 $host = 'localhost';
 $user = 'root';
 $pswd = '';
-$bco  = 'aulascristiano';
+$bco  = 'pousada';
 ?>

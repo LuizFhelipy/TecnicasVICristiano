@@ -10,7 +10,7 @@ $status = '';
 $id = '';
 
 if(isset($_GET['id']) && $_GET['id'] != ""){
-  $sql = "select * from pousada where id = ".$_GET['id'];
+  $sql = "select * from quartos where id = ".$_GET['id'];
   $resultado = mysqli_query($conexao, $sql);
   if($resultado){
     $dados = mysqli_fetch_array($resultado);
