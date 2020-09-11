@@ -1,5 +1,5 @@
 <div class="header">
-  <a href="#default" class="logo">Pousada</a>
+  <a href="index.php" class="logo">Pousada</a>
   <div class="header-right">
     <a href="formulario_clientes.php">Formulário Clientes</a>
     <a href="clientes.php">Clientes</a>

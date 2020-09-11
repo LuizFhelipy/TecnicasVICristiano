@@ -34,7 +34,7 @@
   </head>
 
   <body>
-    <?php include_once("menu.php"); ?>
+    <?php include_once("index.php"); ?>
     <div width=60% align=center>
       <form class="formulario" method="post" action="quartos.php" align=left>
         <p> Envie uma mensagem preenchendo o formulário abaixo</p>

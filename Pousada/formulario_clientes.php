@@ -36,7 +36,7 @@
   </head>
 
   <body>
-    <?php include_once("menu.php"); ?>
+    <?php include_once("index.php"); ?>
 
     <div width=60% align=center>
       <form class="formulario" method="post" action="clientes.php" align=left>

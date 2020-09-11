@@ -49,7 +49,7 @@ if (isset($_GET['msg']) && $_GET['msg'] != "") {
 </head>
 
 <body>
-	<?php include_once("menu.php"); ?>
+	<?php include_once("index.php"); ?>
 	<h2 align=center>Quartos:</h2>
 
 	<table border=1 width=80% align=center>
