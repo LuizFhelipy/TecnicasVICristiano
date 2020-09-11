@@ -51,7 +51,6 @@ if (isset($_GET['msg']) && $_GET['msg'] != "") {
 <body>
 	<?php include_once("menu.php"); ?>
 	<h2 align=center>Quartos:</h2>
-	<p align=center> <a href="formulario_quartos.php">Cadastrar</a></p>
 
 	<table border=1 width=80% align=center>
 		<tr>
@@ -83,7 +82,6 @@ if (isset($_GET['msg']) && $_GET['msg'] != "") {
 		?>
 
 	</table>
-	<p align=center> <a href="formulario_quartos.php">Cadastrar</a></p>
 </body>
 
 </html>
