@@ -37,7 +37,8 @@
     <link rel="stylesheet" type="text/css" href="estilo.css">
   </head>
 
-  <body background-color="gray">
+  <body>
+    <?php include_once("menu.php"); ?>
     <div width=60% align=center>
       <form class="formulario" method="post" action="reservas.php" align=left>
         <p> Envie uma mensagem preenchendo o formulário abaixo</p>

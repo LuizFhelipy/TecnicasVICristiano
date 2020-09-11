@@ -61,13 +61,14 @@ if (isset($_GET['msg']) && $_GET['msg'] != "") {
 </head>
 
 <body>
+	<?php include_once("menu.php"); ?>
 	<h2 align=center>Reservas:</h2>
 	<p align=center> <a href="formulario_reservas.php">Cadastrar</a></p>
 
 	<table border=1 width=80% align=center>
 		<tr>
-			<td><label for="id_quarto">ID do quarto:</label></td>
-			<td><label for="id_cliente">ID do cliente:</label></td>
+			<td><label for="num_quarto">Número do quarto:</label></td>
+			<td><label for="nome_cliente">Nome do cliente:</label></td>
 			<td><label for="data_entrada">Data de Entrada:</label></td>
 			<td><label for="data_saida">Data de Saída:</label></td>
 			<td><label for="valor_reserva">Valor da Reserva:</label></td>
@@ -76,14 +77,13 @@ if (isset($_GET['msg']) && $_GET['msg'] != "") {
 			<td><label for="acoes">Ações</label></td>
 		</tr>
 
-
 		<?php
-		$sql = "select id, id_quarto, id_cliente, data_entrada, data_saida, valor_reserva, status_reserva, datahora_status from reservas ";
+		$sql = "select r.*, q.num_porta, c.nome_cliente from reservas as r left join quartos as q on r.id_quarto = q.id left join clientes as c on r.id_cliente = c.id";
 		$resultado = mysqli_query($conexao, $sql);
 
 		while ($dados = mysqli_fetch_array($resultado)) {
-			echo '<tr><td>' . $dados['id_quarto'] . '</td>
-				  <td>' . $dados['id_cliente'] . '</td>
+			echo '<tr><td>' . $dados['num_porta'] . '</td>
+				  <td>' . $dados['nome_cliente'] . '</td>
 				  <td>' . $dados['data_entrada'] . '</td>        
 					<td>' . $dados['data_saida'] . '</td>
 					<td>' . $dados['valor_reserva'] . '</td>
